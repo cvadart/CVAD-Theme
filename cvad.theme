@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the CVAD theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+
+
+/**
+ * Implements hook_preprocess_HOOK() for menu.html.twig.
+ */
+function cvad_preprocess_menu(&$variables) {
+  $variables['attributes']['class'][] = 'clearfix';
+}

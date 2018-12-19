@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|PT+Serif:400,700');
+
+
+//CVAD Palette colors
+$white: #fff;
+$black: #231f20;
+$pink: #ec008c;
+$green: #c2cb1e;
+$blue: #00aeef;
+$unt-green: #059033;
+
+$font-color: $black;
+$font-2-color: $white;
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Serif', serif;
+}
+
+a, p, li, body #header, html body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html body {
+    background: none;
+    font-size: 100%;
+    min-height: 0;
+    overflow-x: hidden;
+    
+    .main-content {
+        float: none;
+        position: unset;
+    }
+}
+
+@import "header";
+@import "footer";
+@import "homepage";
+@import "pages";

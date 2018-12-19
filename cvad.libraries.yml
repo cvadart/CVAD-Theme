@@ -1,0 +1,11 @@
+global:
+  version: 1.0
+  css:
+    base:
+      css/cvad.css: {}
+    
+  js:
+    js/scripts.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

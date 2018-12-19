@@ -1,0 +1,473 @@
+body #header {
+    background: rgba(0, 0, 0, 0.4);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all ease 0.5s;
+    z-index: 10;
+    height: 50px;
+
+    @media (min-width: 992px) {
+        height: auto;
+    }
+
+    .region-header {
+        padding: 0;
+    }
+
+    .layout-container {
+        max-width: 100%;
+    }
+
+    .region-header .block {
+        float: left;
+        margin: 0;
+    }
+}
+
+.site-branding__logo {
+    margin-top: -1px !important;
+    width: 100%;
+    background: url('/themes/cvad/images/UNT-CVAD-Logo.png') left center / cover no-repeat;
+    width: 150px;
+    height: 30px;
+    margin: 0;
+    transition: all ease 0.3s;
+
+    @media (min-width: 992px) {
+        background: url('/themes/cvad/images/UNT-CVAD-Full.svg') left center / cover no-repeat;
+        height: 35px;
+        min-width: 597px;
+    }
+
+    @media (min-width: 1241px) {
+        height: 50px;
+        min-width: 800px;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+#block-cvad-search {
+    position: absolute;
+    right: 55px;
+
+    @media (min-width: 992px) {
+        right: 20px;
+    }
+
+    &::after {
+        content: '';
+        background: none;
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        top: 10px;
+        cursor: pointer;
+        right: 0;
+
+        @media (min-width: 992px) {
+            top: 5px;
+        }
+    }
+
+    .search-form .form-search {
+        width: 200px;
+        height: 0;
+        border: none;
+        padding: 0;
+        margin-top: 40px;
+        transition: all ease .5s;
+
+        @media (min-width: 568px) {
+            width: 0;
+            height: 25px;
+            margin-top: 15px;
+            margin-right: 5px;
+        }
+    }
+
+    .search-form__submit {
+        background: url('/themes/cvad/images/loupe.svg') no-repeat center;
+        border: none;
+        width: 16px;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        @media (min-width: 568px) {
+            position: relative;
+            margin-top: 13px;
+        }
+
+        @media (min-width: 992px) {
+            position: relative;
+            top: auto;
+            right: auto;
+        }
+    }
+
+    &.openSearch {
+
+        .search-form .form-search {
+            height: 25px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            margin-top: 40px;
+
+            @media (min-width: 568px) {
+                width: 200px;
+                margin-top: 15px;
+            }
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+#block-cvad-search {
+    .search-form__submit {
+        background: url('/themes/cvad/images/loupe-white.svg') no-repeat center;
+    }
+
+    header {
+        box-shadow: none;
+    }
+}
+
+header.header--scroll {
+    background: rgba(255, 255, 255, .93) !important;
+    height: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+
+    #block-cvad-search {
+        .search-form__submit {
+            background: url('/themes/cvad/images/loupe.svg') no-repeat center;
+        }
+    }
+
+    .navbar-toggle .icon-bar {
+        background-color: $black;
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    #header .navbar {
+        margin-bottom: 0;
+    }
+
+    .we-mega-menu-ul {
+        pointer-events: auto;
+    }
+
+    .region-we-mega-menu {
+        pointer-events: none;
+    }
+
+    .region-we-mega-menu:hover {
+        padding-bottom: 120px;
+    }
+
+
+    nav.navbar-we-mega-menu {
+        transition: all ease 0.3s;
+        text-align: center;
+        position: relative;
+        z-index: 100;
+        background: none;
+
+        .we-mega-menu-row > * {
+            margin-left: 0;
+        }
+
+        ul.we-mega-menu-ul {
+            margin: auto;
+            position: initial;
+            max-width: 1000px;
+            display: inline-block;
+
+            > li.we-mega-menu-li {
+                background: none;
+                position: initial;
+                border: none;
+                margin: 0;
+
+                > a {
+                    padding: 5px 15px;
+                    margin: 15px auto;
+                }
+
+                > a.we-mega-menu-li::after {
+                    content: "";
+                    background: url('/themes/cvad/images/cvad_menu_border.svg') left center / cover no-repeat;
+                    height: 5px;
+                    width: calc(100% - 28px);
+                    position: absolute;
+                    z-index: 110;
+                    top: 30px;
+                    left: 15px;
+                    opacity: 0;
+                    filter: none;
+                    transition: all ease 0.25s;
+                    display: block;
+                }
+
+                &.hover > a.we-mega-menu-li::after {
+                    opacity: 1;
+                }
+
+                &:hover > a.we-mega-menu-li::after {
+                    opacity: 1;
+
+                }
+            }
+
+            .dropdown-menu > a::before {
+                display: none;
+                content: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            a.we-mega-menu-li {
+                color: $white;
+                font-size: 1rem;
+                transition: all ease 0.3s;
+                background: none;
+                font-size: 0.9rem;
+                z-index: 110;
+
+                @media (min-width: 992px) {
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: none;
+                        color: #333;
+                    }
+                }
+            }
+        }
+
+        .we-mega-menu-submenu {
+            width: 100%;
+            border: 0;
+            z-index: 100;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3) !important;
+            min-height: 200px;
+            padding-top: 65px;
+            top: 0;
+
+            > .we-mega-menu-submenu-inner {
+                min-height: 0;
+            }
+
+            .we-mega-menu-row {
+                max-width: 100%;
+                transition: all ease 0.5s;
+                margin-left: 193px;
+                margin-right: 100px;
+            }
+
+            .submenu__headline .we-megamenu-nolink {
+                font-size: 1rem !important;
+                margin-bottom: 5px;
+            }
+
+            li a:hover {
+                text-decoration: underline !important;
+                color: #000 !important;
+            }
+
+            .submenu__subheadline {
+
+                span {
+                    color: $black;
+                    font-size: .9rem;
+                }
+
+                &--2 {
+                    margin-top: 65px;
+                }
+
+                .we-megamenu-nolink {
+                    border: none;
+                    padding: 0 0 5px 0;
+                }
+            }
+
+            .submenu__group__subheadline {
+                margin-top: 15px;
+
+                &-first {
+                    margin-top: 0;
+                }
+
+                a {
+                    font-weight: 500 !important;
+                }
+            }
+
+            .sidebyside {
+                margin: 15px 0;
+            }
+        }
+
+        ul.subul {
+            li.we-mega-menu-li {
+                a.we-mega-menu-li {
+                    background: none;
+                    font-size: 0.9rem;
+                    line-height: 1.4;
+                    border: none;
+                    font-weight: 400;
+                    margin: 0;
+                    padding: 0;
+                    color: #808284;
+                }
+            }
+        }
+
+        .we-mega-menu-ul > .we-mega-menu-li.active > a,
+        .we-mega-menu-ul > .we-mega-menu-li.active > a:hover,
+        .we-mega-menu-ul > .we-mega-menu-li.active > a:focus,
+        .we-mega-menu-ul > .we-mega-menu-li.active-trail > a,
+        .we-mega-menu-ul > .we-mega-menu-li.active-trail > a:hover,
+        .we-mega-menu-ul > .we-mega-menu-li.active-trail > a:focus {
+            background: none;
+            color: #fff;
+            border: 0 none;
+        }
+
+        .mega-menu-submenu li.we-mega-menu-li.active > a,
+        .we-mega-menu-submenu li.we-mega-menu-li.active > a:hover,
+        .we-mega-menu-submenu li.we-mega-menu-li.active > a:focus,
+        .we-mega-menu-submenu li.we-mega-menu-li.active > .we-megamenu-nolink {
+            background: none;
+            color: #111;
+            border: 0;
+            text-decoration: underline;
+        }
+
+        &:hover {
+
+            .we-mega-menu-ul > .we-mega-menu-li.active > a,
+            .we-mega-menu-ul > .we-mega-menu-li.active > a:hover,
+            .we-mega-menu-ul > .we-mega-menu-li.active > a:focus,
+            .we-mega-menu-ul > .we-mega-menu-li.active-trail > a,
+            .we-mega-menu-ul > .we-mega-menu-li.active-trail > a:hover,
+            .we-mega-menu-ul > .we-mega-menu-li.active-trail > a:focus {
+                color: #333;
+            }
+        }
+    }
+
+    nav.navbar-we-mega-menu:hover ul.we-mega-menu-ul > li.we-mega-menu-li > a {
+        color: #333;
+    }
+
+    .region.region-primary-menu,
+    .we-mega-menu-ul.nav.nav-tabs {
+        transition: all ease 0.5s;
+    }
+
+    nav[data-animation="Fading"]:not(.click-action) .we-mega-menu-ul .we-mega-menu-li.dropdown-menu.open > .we-mega-menu-submenu,
+    nav[data-animation="Fading"] .we-mega-menu-ul .we-mega-menu-li.dropdown-menu.clicked > .we-mega-menu-submenu,
+    nav[data-animation="Fading"]:not(.admin) .we-mega-menu-ul .dropdown-menu:not(.clicked):hover > .we-mega-menu-submenu,
+    nav[data-animation="Fading"]:not(.admin) .we-mega-menu-ul .dropdown-menu:not(.clicked):focus > .we-mega-menu-submenu {
+        animation: none;
+        transition: all 0s;
+    }
+
+
+    #header.header--scroll {
+        height: 105px;
+
+        .region-header {
+            width: 49% !important;
+        }
+
+        .site-branding__logo {
+            width: 100%;
+            background: url('/themes/cvad/images/UNT-CVAD-Logo.png') left center / cover no-repeat;
+            width: 150px;
+            height: 30px;
+            transition: width ease 0.3s;
+            transition: background ease 1s;
+
+            @media (min-width: 568px) {
+                min-width: 200px;
+                height: 45px;
+            }
+        }
+
+        nav.navbar-we-mega-menu {
+
+            ul.we-mega-menu-ul > li.we-mega-menu-li > a {
+                padding: 5px 15px;
+                margin: 5px auto;
+                font-size: 0.8rem;
+                color: #333;
+            }
+
+            .we-mega-menu-submenu .we-mega-menu-row {
+                max-width: 100%;
+                margin-left: 227px;
+                margin-right: 103px;
+
+            }
+
+            ul.we-mega-menu-ul > li.we-mega-menu-li > a.we-mega-menu-li::after {
+                width: calc(100% - 30px);
+                top: 35px;
+                left: 15px;
+            }
+        }
+    }
+}
+
+.overlay {
+    z-index: 1;
+}
+
+.navbar-we-mega-menu.navbar.we-mobile-megamenu-active {
+    z-index: 100;
+}
+
+@media (max-width: 991px) {
+        .region-we-mega-menu {
+        background: none;
+        width: 40px;
+        right: 15px;
+        left: auto;
+        position: absolute;
+        top: 5px;
+    }
+    
+    .navbar-we-mega-menu.navbar .nav-tabs .dropdown-menu {
+        position: relative;
+        z-index: 100;
+    }
+
+    .navbar-we-mega-menu.navbar .dropdown-menu > a::after {
+        position: absolute;
+        z-index: 300;
+        padding: 3px 10px;
+        cursor: pointer;
+    }
+
+    .navbar-we-mega-menu.navbar .nav-tabs .nav-tabs > li > a,
+    .navbar-we-mega-menu.navbar .nav-tabs .nav-tabs > li > .we-megamenu-nolink {
+        line-height: 1.4;
+    }
+
+    .navbar-we-mega-menu.navbar ul > li ul {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

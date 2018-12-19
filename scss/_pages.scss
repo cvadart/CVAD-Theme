@@ -1,0 +1,37 @@
+body:not(.path-frontpage) #main-wrapper {
+    max-width: 1024px;
+    margin: 50px auto 30px;
+    
+    @media (min-width: 992px) {
+        min-height: calc(100vh - 320px);
+    }
+    
+    @media (min-width: 1124px) {
+        margin: 127px auto 30px;
+        min-height: calc(100vh - 397px);
+    }
+}
+
+body.layout-sidebar-first .main-content {
+    @media (min-width: 851px) {
+        margin-left: 0;
+        float: right;
+    }
+}
+
+body #sidebar-first {
+@media (min-width: 851px) {
+        margin-left: 0;
+        float: left;
+    }
+    
+    ul.dropdown > li > a {
+        font-weight: 700;
+    }
+    
+    a {
+        text-decoration: none;
+        border: none;
+        font-weight: 300;
+    }
+}

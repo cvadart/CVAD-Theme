@@ -1,0 +1,98 @@
+.footer {
+    position: relative;
+    background: $unt-green;
+    height: 25vh;
+    font-size: .9rem;
+    display: flex;
+    height: 100%;
+    
+    @media (min-width: 568px) {
+        height: auto;
+    }
+    
+     @media (min-width: 992px) {
+        min-height: 240px;
+    }
+    
+    &__sections {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: auto auto 0;
+        
+        @media (min-width: 568px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 565px;
+        }
+        
+         @media (min-width: 992px) {
+            flex-wrap: nowrap;
+              max-width: 1200px;
+        }
+    }
+    
+    &__section {
+        flex: 1 1 100%;
+        padding: 10px;
+        
+         @media (min-width: 568px) {
+             flex: 1 1 50%;
+        }
+        
+        @media (min-width: 992px) {
+            flex: 1 1 19%;
+        }
+        
+        h2 {
+            color: $font-2-color;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        
+        &--1 {
+            .field--type-image {
+                text-align: center;
+                
+                @media (min-width: 568px) {
+                     text-align: left;
+                }
+
+                @media (min-width: 992px) {
+                    text-align: center;
+                }
+            }
+            
+            img {
+                max-width: 150px;
+                width: 100%;
+                margin: auto;
+            }
+        }
+        
+        
+        &--5 {
+            flex: 1 1 24%;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 25px;
+            
+            .field__item {
+                 display: inline-block;   
+            }
+            
+            img {
+                height: 40px;
+                width: auto;
+            }
+            
+            .region.region-footer-fifth {
+                margin: auto;
+                
+                @media (min-width: 568px) {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
