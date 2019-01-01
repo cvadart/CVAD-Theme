@@ -2,24 +2,29 @@
     $(document).ready(function(){
         $('.we-mega-menu-submenu').hover(
           function(){ $(this).parent().toggleClass('hover')
-                      $('#block-cvad-search').removeClass('openSearch')}
+                      $('#search-block-form').removeClass('openSearch')}
         );
         
-        
+        $('.homepage-tab__title').on('click tap', function() {
+            $(this).parent().toggleClass('tabOpen')
+            $(this).parent().siblings().removeClass('tabOpen')
+        });
+
+
        // add hover class to homepage tabs when hovered over
-        $('.homepage-tab__link').hover(
-          function(){ $(this).parent().addClass('hover').siblings().removeClass('hover') }
+        $('.homepage-tab__title').hover(
+            function(){ $(this).parent().addClass('hover').siblings().removeClass('hover') }
         );
         
         // open search bar
-        $('#block-cvad-search').click(
+        $('#search-block-form').click(
           function(){ 
               $(this).addClass('openSearch')
           });
         
         $('main').click(
           function(){ 
-              $('#block-cvad-search').removeClass('openSearch')
+              $('#search-block-form').removeClass('openSearch')
           });
         
         if ($(window).width() < 992) {
@@ -32,7 +37,7 @@
         var scroll = $(window).scrollTop();
         if (scroll >= 1) {
             $('.header').addClass('header--scroll');
-            $('#block-cvad-search').removeClass('openSearch');
+            $('#search-block-form').removeClass('openSearch');
         } else {
             $('.header').removeClass('header--scroll');
         }

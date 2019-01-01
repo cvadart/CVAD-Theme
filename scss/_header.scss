@@ -24,6 +24,10 @@ body #header {
         float: left;
         margin: 0;
     }
+    
+    a {
+        text-decoration: none;
+    }
 }
 
 .site-branding__logo {
@@ -51,7 +55,7 @@ body #header {
     }
 }
 
-#block-cvad-search {
+#search-block-form {
     position: absolute;
     right: 55px;
 
@@ -74,7 +78,7 @@ body #header {
         }
     }
 
-    .search-form .form-search {
+    .form-search {
         width: 200px;
         height: 0;
         border: none;
@@ -112,7 +116,7 @@ body #header {
 
     &.openSearch {
 
-        .search-form .form-search {
+        .form-search {
             height: 25px;
             padding: 5px;
             border: 1px solid #ccc;
@@ -130,7 +134,7 @@ body #header {
     }
 }
 
-#block-cvad-search {
+#search-block-form {
     .search-form__submit {
         background: url('/themes/cvad/images/loupe-white.svg') no-repeat center;
     }
@@ -145,7 +149,7 @@ header.header--scroll {
     height: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 
-    #block-cvad-search {
+   #search-block-form {
         .search-form__submit {
             background: url('/themes/cvad/images/loupe.svg') no-repeat center;
         }
@@ -325,7 +329,7 @@ header.header--scroll {
                     font-size: 0.9rem;
                     line-height: 1.4;
                     border: none;
-                    font-weight: 400;
+                    font-weight: 500;
                     margin: 0;
                     padding: 0;
                     color: #808284;

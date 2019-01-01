@@ -45,12 +45,11 @@
  * - page.footer_fourth: Items for the fourth footer column.
  * - page.footer_fifth: Items for the fifth footer column.
  *
- * @see template_preprocess_page()
  * @see html.html.twig
  */
 #}
  
-  <div id="homepagepage" class="homepage">
+  <div id="homepage" class="homepage">
     <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
       <div class="section layout-container clearfix">
         {{ page.secondary_menu }}
@@ -59,7 +58,7 @@
       </div>
     </header>
 
-    <main id="content" class="main-content" role="main">
+    <main id="content" class="main__content" role="main">
         <section class="homepage__hero">
             {{ page.homepage_hero }}
         </section>
