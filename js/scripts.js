@@ -5,16 +5,17 @@
                       $('#search-block-form').removeClass('openSearch')}
         );
         
-        $('.homepage-tab__title').on('click tap', function() {
+        $('.homepage-tab__title').on('click', function() {
             $(this).parent().toggleClass('tabOpen')
             $(this).parent().siblings().removeClass('tabOpen')
         });
 
-
-       // add hover class to homepage tabs when hovered over
-        $('.homepage-tab__title').hover(
-            function(){ $(this).parent().addClass('hover').siblings().removeClass('hover') }
-        );
+         if (jQuery(window).width() > 991) { 
+           // add hover class to homepage tabs when hovered over
+            $('.homepage-tab__title').hover(
+                function(){ $(this).parent().addClass('hover').siblings().removeClass('hover') }
+            );
+         } else {}
         
         // open search bar
         $('#search-block-form').click(
